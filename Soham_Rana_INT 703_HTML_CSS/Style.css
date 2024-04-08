@@ -1,0 +1,56 @@
+body {
+    height: 500%;
+    background-image: url("IMG_2062.JPG");
+    background-size:auto;
+    background-position-y: top;
+    background-repeat:no-repeat
+}
+#box1{
+    background-color: blue;
+    position: absolute;
+    left: 500px;
+    height: 150px;
+    width: 110px;
+    rotate: 5px;
+    transform: skew(40deg);
+}
+#box2{
+    background-color: red;
+    position: absolute;
+    height: 150px;
+    width: 110px;
+    top: 500px;
+    left: 500px;
+    /* transform: skew(30deg); */
+    transform: rotate(90deg);
+}
+#box3{
+    background-color: green;
+    position: fixed;
+    left: 1410px;
+    top: 550px;
+    scale:unset;
+    /* height: 150px;
+    width: 110px; */
+    bottom: 1px;
+    right: 1px;
+}
+#box4{
+    background-color: purple;
+    position: static;
+    height: 150px;
+    width: 50px;
+}
+#box5{
+    background-color: yellow;
+    position: sticky; 
+    height: 150px;
+    width: 110px;
+    top: 10px;
+    left: 100px;
+}
+/* #box6{
+    background-image: url("1128175.jpg");
+    background-size:contain;
+    background-repeat:no-repeat
+} */

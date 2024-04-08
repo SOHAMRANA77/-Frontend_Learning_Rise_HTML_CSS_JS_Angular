@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="display()">Tip</button>
+</body>
+</html>
+
+<script>
+    function per(a,b){
+        let c = a*(1+(b/100))
+        console.log(`The bill was ${a}, the tip was ${c-a}, and total value is ${c}`);
+    }
+
+    function tip_money(a){
+        if (a <= 50){per(a,10)}
+        else if (a>50 && a<=300){per(a,15)}
+        else {per(a,20)}
+    }
+
+    function tip_money1(a) {
+        const conditions = [
+            { limit: 50, percentage: 10 },
+            { limit: 300, percentage: 15 },
+            { limit: Infinity, percentage: 20 }
+        ];
+
+        const { percentage } = conditions.find(condition => a <= condition.limit);
+        per(a, percentage);
+    }
+    
+    function tip_money2(a) {
+        const percentage = 
+            a <= 50 ? 10 :
+            a <= 300 ? 15 :
+            20;
+
+        per(a, percentage);
+    }
+
+    function Steven(a){
+        let tip = a;
+        tip_money(a);
+    }
+
+
+    function display(){
+        Steven(275);
+        Steven(40);
+        Steven(430);
+    }
+
+</script>

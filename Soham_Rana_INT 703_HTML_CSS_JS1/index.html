@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Submit" value="Submit" onclick="disply()">Submit</button>
+    <button onclick="gymnastics()">gymnastics</button>
+</body>
+</html>
+
+<script>
+    let marks_w = 78
+    let marks_h = 1.68
+    let john_w = 92
+    let  john_h = 1.95
+    function BMI(mass,height){
+        return mass/height**2
+    }
+
+    console.log("Mark's BMI index is "+BMI(marks_w,marks_h)+"\n\Jark's BMI index is "+BMI(john_w,john_h));
+
+    function disply1(){
+        let marks_w = 78
+        let marks_h = 1.68
+        let john_w = 92
+        let  john_h = 1.95
+
+        if(BMI(marks_w,marks_h)>BMI(john_w,john_h)){
+            console.log("Mark's BMI index is higher then John's!");
+        }
+        else{
+            console.log("John's BMI index is higher then Mark's!");
+        }
+    }
+    function disply2(){
+        let marks_w = 95
+        let marks_h = 1.69
+        let john_w = 85
+        let  john_h = 1.76
+        let m = BMI(marks_w,marks_h).toFixed(2)
+        let j =BMI(john_w,john_h).toFixed(2)
+
+        if (m > j) {
+            console.log(`Mark's BMI index (${m}) is higher than John's (${j})!`);
+        } else if (j > m) {
+            console.log(`John's BMI index (${j}) is higher than Mark's (${m})!`);
+        } else {
+            console.log(`Both Mark and John have the same BMI index (${m})!`);
+        }
+    }
+    function disply(){
+        disply1();
+        disply2();
+        }
+    function avga(a,b,c){
+        return (a+b+c)/3
+    }
+    function avgas(a,b){
+        if (a>b && (a>=100 && b>=100)){
+            return "Dolphins Wins Trophy";
+        }
+        else if(b>a && (a>=100 && b>=100)){
+            return "Koalas Wins Trophy";
+        }
+        else if(a == b && (a>=100 && b>=100)){
+            return "Draw"
+        }
+        else{
+            return "No Trophy";
+        }
+    }
+    function Match1(){
+        let d_p1 = 188;
+        let d_p2 = 91;
+        let d_p3 = 58;
+
+        let k_p1 = 88;
+        let k_p2 = 91;
+        let k_p3 = 110;
+
+        let d_a = avga(d_p1,d_p2,d_p3);
+        let k_a = avga(k_p1,k_p2,k_p3);
+
+        let m_a = avgas(d_a,k_a)
+
+        console.log(m_a);
+    }
+    function Match2(){
+        let d_p1 = 108;
+        let d_p2 = 108;
+        let d_p3 = 108;
+
+        let k_p1 = 108;
+        let k_p2 = 108;
+        let k_p3 = 108;
+
+        let d_a = avga(d_p1,d_p2,d_p3);
+        let k_a = avga(k_p1,k_p2,k_p3);
+
+        let m_a = avgas(d_a,k_a)
+
+        console.log(m_a);
+    }
+
+    function gymnastics(){
+        Match1(); 
+        Match2(); 
+      }
+
+
+
+
+
+
+
+
+</script>
