@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="gymnastics()">gymnastics</button>
+</body>
+</html>
+
+<script>
+    function calcAvg(a,b,c){
+        return (a+b+c)/3
+    }
+    // function checkWinner(a,b){
+    //     if (a>b && (a >=  2*b)){
+    //         return "Dolphins Wins Trophy";
+    //     }
+    //     else if(b>a && (b >= 2*a)){
+    //         return "Koalas Wins Trophy";
+    //     }
+    //     // else if(a == b && (a>=100 && b>=100)){
+    //     //     return "Draw"
+    //     // }
+    //     else{
+    //         return "No Trophy";
+    //     }
+    // }
+
+    checkWinner = (a,b)=>{
+        if (a>b && (a >=  2*b)){
+            return "Dolphins Wins Trophy";
+        }
+        else if(b>a && (b >= 2*a)){
+            return "Koalas Wins Trophy";
+        }
+        // else if(a == b && (a>=100 && b>=100)){
+        //     return "Draw"
+        // }
+        else{
+            return "No Trophy";
+        }
+    }
+    function Match1(){
+        let d_p1 = 44;
+        let d_p2 = 23;
+        let d_p3 = 71;
+
+        let k_p1 = 65;
+        let k_p2 = 54;
+        let k_p3 = 49;
+
+        let d_a = calcAvg(d_p1,d_p2,d_p3);
+        let k_a = calcAvg(k_p1,k_p2,k_p3);
+
+        let m_a = checkWinner(d_a,k_a)
+
+        console.log(m_a);
+        console.log(d_a,k_a);
+    }
+    function Match2(){
+        let d_p1 = 85;
+        let d_p2 = 54;
+        let d_p3 = 41;
+
+        let k_p1 = 23;
+        let k_p2 = 34;
+        let k_p3 = 27;
+
+        let d_a = calcAvg(d_p1,d_p2,d_p3);
+        let k_a = calcAvg(k_p1,k_p2,k_p3);
+
+        let m_a = checkWinner(d_a,k_a)
+
+        console.log(m_a);
+        console.log(d_a,k_a);
+    }
+
+    function gymnastics(){
+        Match1(); 
+        Match2(); 
+      }
+
+</script>

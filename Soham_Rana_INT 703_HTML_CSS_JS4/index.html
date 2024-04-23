@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="display()">Tip</button>
+</body>
+</html>
+<script>
+
+    const Bills = [125,555,44];
+    
+    function CalcTip(a){
+        if(a <50){ return 0}
+        else if(a>=50 && a<=300){ return a*0.15}
+        else{ return a*0.20}
+    }
+    // console.log(CalcTip(100))
+    const tips = [];
+    const total = [];
+    for(let i =0;i<Bills.length;i++){
+        tips[i] = CalcTip(Bills[i]);
+        total[i] = Bills[i]+tips[i];    
+    }
+
+    function display(){
+        for(let i=0; i<Bills.length;i++){
+            console.log(`the bills id ${Bills[i]} and tip is ${tips[i]} at last Total Bill is ${total[i]}`);
+        }
+    }
+
+
+</script>
